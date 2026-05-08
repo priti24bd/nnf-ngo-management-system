@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>NNF Volunteers</h1>
+
+        {% for volunteer in volunteers %}
+            <div class="card">
+                <h3>{{ volunteer.name }}</h3>
+                <p>Team: {{ volunteer.team }}</p>
+            </div>
+        {% endfor %}
+
+        <a href="/">Back Home</a>
+    </div>
+</body>
+</html>
